@@ -16,6 +16,10 @@ alu0101121529@ull.edu.es
 Se nos piden crear listas de dietas, formadas por diferentes platos y comparar las dietas usando los módulos comparable y enumerable.
 Para hacer esto también necesitamos hacer una clase BasicPlato y otra Plato para meterlos en las listas.
 
+## Travis
+
+Link para el directorio en travis <link>https://travis-ci.com/alu0101121529/lpp_travis_p10</link>
+
 ## Árbol de directorios
 
 ```bash
