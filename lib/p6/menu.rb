@@ -2,14 +2,57 @@ require "p6/p6"
 require "p6/list"
 require "p6/basicplato"
 
+class PlatoDSL
+    attr_accessor :nombre, :ingredientes, :peso
+
+    def initialize(&block)
+        @nombre
+        @ingredientes = []
+        @peso = []
+        if block_given?
+            if block.arity == 1
+                yield self
+            else
+                instance_eval(&block)
+            end
+        end
+    end
+
+    def to_s
+        output = @nombre
+        output << "\nIngredients:\n\n"
+        @ingredientes.zip(@peso).each do |alimento, peso1|
+            output << "\n " << alimento
+            output << "\n Peso: " << peso1.to_s
+        end
+        output
+    end
+
+    def alimento(options = {})
+        @ingredientes << options[:nombre] if options[:nombre]
+        @pesos << options[:peso] if options[:peso]
+    end
+    
+    def nombre(name)
+        @name=name
+    end
+end
+
 
 class Menu
-    attr_reader :nombre,:descripcion,:platos,:precios
-    def initialize(nombre,descripcion,lista_platos,lista_precios)
+    attr_reader :nombre,:platos,:precios
+    def initialize(nombre,&block,&block)
         @nombre = nombre
-        @platos = lista_platos
-        @precios = lista_precios
-        @descripcion = descripcion
+        @platos = []
+        @precios = []
+
+        if block_given?  
+            if block.arity == 1
+                yield self
+            else
+                instance_eval(&block) 
+            end
+        end
     end
 
     def insert(plato,precio)
@@ -36,7 +79,6 @@ class Menu
     def to_s
         resultado = ""
         resultado +="Nombre: #{@nombre} \n"
-        resultado +="Descripción: #{@descripcion} \n"
         resultado +="Precio total: #{sum_precio()} \n"
         @platos.zip(@precios).each do |plato,precio|
             resultado +="Plato: #{plato.nombre}   Precio: #{precio}€  Valor nutricional: #{plato.vct}  gases: #{plato.gei}  terreno: #{plato.terrenos} \n"
