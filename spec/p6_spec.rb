@@ -650,7 +650,6 @@ RSpec.describe P6 do
         @precio_menu << 3.0
         @precio_menu << 9.0
         @precio_menu << 11.0
-        @menut = Menu.new("prueba_nombre","prueba_descripcion",@array1,@precio_menu)
       end
       
       it "Comprobar el plato mayor" do
@@ -662,14 +661,29 @@ RSpec.describe P6 do
           expect(precionuevo).to eq(precioprevio* @array1.max.huella_ambiental * 0.5)
         end
       end
-      it "La clase menú funca" do
-        puts @menut.to_s
+    end
+
+    describe Menu do
+      before :each do
+        @menu=Menu.new("Carne demencia") do
+          descripcion "Comida festiva"
+          partes :nombre => "CARNE",
+                      :precio => 5.10
+          partes :nombre => "leche",
+                      :precio => 2.40
+          partes :nombre => "pimientos",
+                      :precio => 3.50
+          valores_ambientales :gei => 1500.78 , :terreno =>312.0
+          valores_nutricion :prot => 40.0,
+                      :lips => 35.6,
+                      :carbs => 54.9
+
+        end
       end
-      
-        
-      #
-
-
+      it "Funciona correctamente el to_s" do
+        expect(@menu).respond_to?(:to_s)
+          puts @menu.to_s
+      end
     end
 
 

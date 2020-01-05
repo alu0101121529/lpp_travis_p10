@@ -40,11 +40,17 @@ end
 
 
 class Menu
-    attr_reader :nombre,:platos,:precios
-    def initialize(nombre,&block,&block)
+    attr_reader :nombre,:descripcion,:platos,:precio
+    def initialize(nombre,&block)
         @nombre = nombre
         @platos = []
         @precios = []
+        @descripcion
+        @lipidos
+        @proteinas
+        @carbohidratos
+        @gases 
+        @terrenos
 
         if block_given?  
             if block.arity == 1
@@ -55,18 +61,26 @@ class Menu
         end
     end
 
-    def insert(plato,precio)
-        @platos << plato
-        @precios << precio
+    def descripcion(desc)
+        @descripcion = desc
+    end
+    
+    def partes(options = {})
+        @platos << options[:nombre] if options[:nombre]
+        @precios << options[:precio] if options[:precio]
     end
 
-    def get_plato(indice)
-        return @platos[indice]
+    def valores_nutricion(options = {})
+        @lipidos = options[:lips] if options[:lips]
+        @proteinas = options[:prot] if options[:prot]
+        @carbohidratos = options[:carbs] if options[:carbs]
     end
 
-    def get_precio(indice)
-        return @precios[indice]
+    def valores_ambientales(options = {})
+        @gases = options[:gei] if options[:gei]
+        @terrenos = options[:terreno] if options[:terreno]
     end
+
 
     def sum_precio
         sum=0
@@ -79,10 +93,12 @@ class Menu
     def to_s
         resultado = ""
         resultado +="Nombre: #{@nombre} \n"
-        resultado +="Precio total: #{sum_precio()} \n"
+        resultado +="Precio total: #{sum_precio()}€"
         @platos.zip(@precios).each do |plato,precio|
-            resultado +="Plato: #{plato.nombre}   Precio: #{precio}€  Valor nutricional: #{plato.vct}  gases: #{plato.gei}  terreno: #{plato.terrenos} \n"
+            resultado << "\n" << plato << " " << precio.to_s() << "€"
         end
+        resultado << "\n\nValores sobre la nutrición\n\nProteinas: " << @proteinas.to_s() << "\nLipidos: " << @lipidos.to_s() << "\nCarbo Hidratos: " << @carbohidratos.to_s()
+        resultado << "\n\nValores sobre la contaminación\n\nGases: " << @gases.to_s() << "\nTerrenos " << @terrenos.to_s()
         return resultado
     end
 end
