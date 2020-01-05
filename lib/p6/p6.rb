@@ -19,6 +19,7 @@ class Alimento
         @terreno = te 
     end
 
+
     # Devuelve cada uno de los parámetros de Alimento como una string
     
     def to_string()
