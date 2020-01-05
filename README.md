@@ -23,31 +23,7 @@ Link para el directorio en travis <link>https://travis-ci.com/alu0101121529/lpp_
 ## Árbol de directorios
 
 ```bash
-.
-├── CODE_OF_CONDUCT.md
-├── Gemfile
-├── Gemfile.lock
-├── Guardfile
-├── LICENSE.txt
-├── README.md
-├── Rakefile
-├── bin
-│   ├── console
-│   └── setup
-├── lib
-│   ├── p6
-│   │   ├── basicplato.rb
-│   │   ├── list.rb
-│   │   ├── p6.rb
-│   │   └── version.rb
-│   └── p6.rb
-├── p6.gemspec
-├── pkg
-│   └── p6-0.1.0.gem
-├── spec
-│   ├── p6_spec.rb
-│   └── spec_helper.rb
-└── tmp
+.                                                                                                                       ├── CODE_OF_CONDUCT.md                                                                                                  ├── Gemfile                                                                                                             ├── Gemfile.lock                                                                                                        ├── Guardfile                                                                                                           ├── LICENSE.txt                                                                                                         ├── README.md                                                                                                           ├── Rakefile                                                                                                            ├── bin                                                                                                                 │   ├── console                                                                                                         │   └── setup                                                                                                           ├── doc                                                                                                                 │   ├── Alimento.html                                                                                                   │   ├── BasicPlato.html                                                                                                 │   ├── List.html                                                                                                       │   ├── Node.html                                                                                                       │   ├── P6                                                                                                              │   │   └── Error.html                                                                                                  │   ├── P6.html                                                                                                         │   ├── Plato.html                                                                                                      │   ├── _index.html                                                                                                     │   ├── class_list.html                                                                                                 │   ├── css                                                                                                             │   │   ├── common.css                                                                                                  │   │   ├── full_list.css                                                                                               │   │   └── style.css                                                                                                   │   ├── file.README.html                                                                                                │   ├── file_list.html                                                                                                  │   ├── frames.html                                                                                                     │   ├── index.html                                                                                                      │   ├── js                                                                                                              │   │   ├── app.js                                                                                                      │   │   ├── full_list.js                                                                                                │   │   └── jquery.js                                                                                                   │   ├── method_list.html                                                                                                │   └── top-level-namespace.html                                                                                        ├── lib                                                                                                                 │   ├── p6                                                                                                              │   │   ├── basicplato.rb                                                                                               │   │   ├── list.rb                                                                                                     │   │   ├── menu.rb                                                                                                     │   │   ├── p6.rb                                                                                                       │   │   └── version.rb                                                                                                  │   └── p6.rb                                                                                                           ├── p6.gemspec                                                                                                          ├── pkg                                                                                                                 │   └── p6-0.1.0.gem                                                                                                    ├── spec                                                                                                                │   ├── p6_spec.rb                                                                                                      │   └── spec_helper.rb                                                                                                  └── tmp
 ```
 
 
