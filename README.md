@@ -19,6 +19,7 @@ Para hacer esto también necesitamos hacer una clase BasicPlato y otra Plato par
 ## Travis
 
 Link para el directorio en travis <link>https://travis-ci.com/alu0101121529/lpp_travis_p10</link>
+<a href='https://coveralls.io/github/alu0101121529/lpp_travis_p10?branch=master'><img src='https://coveralls.io/repos/github/alu0101121529/lpp_travis_p10/badge.svg?branch=master' alt='Coverage Status' /></a>
 
 ## Árbol de directorios
 
