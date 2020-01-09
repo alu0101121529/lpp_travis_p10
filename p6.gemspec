@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "p6/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "p6"
+  spec.name          = "p6-alu0101121529"
   spec.version       = P6::VERSION
   spec.authors       = ["alu0101121529"]
   spec.email         = ["alu0101121529@ull.edu.es"]
@@ -13,11 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101121529"
   spec.license       = "MIT"
 
-  spec.metadata["allowed_push_host"] = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101121529"
 
-  spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101121529"
-  spec.metadata["changelog_uri"] = "https://github.com/ULL-ESIT-LPP-1920/tdd-alu0101121529"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

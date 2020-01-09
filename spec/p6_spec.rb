@@ -615,6 +615,7 @@ RSpec.describe P6 do
         @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
         @list1.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
         @plato1 =Plato.new("Chuletoncio de vaca", @list1)
+        plato1 =Plato.new("Chuletoncio de vaca", @list1)
         @list2 = List.new(nil,nil)
         @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
         @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
@@ -627,6 +628,7 @@ RSpec.describe P6 do
         @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
         @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
         @plato2 = Plato.new("Cafeina a tope", @list2)
+        plato2 = Plato.new("Cafeina a tope", @list2)
         @list3 = List.new(nil,nil)
         @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
         @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
@@ -635,6 +637,7 @@ RSpec.describe P6 do
         @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
         @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
         @plato3 = Plato.new("Tofu hasta en los pies",@list3)
+        plato3 = Plato.new("Tofu hasta en los pies",@list3)
         @list4 = List.new(nil,nil)
         @list4.insert_head(Alimento.new("Nuez", 20.0, 21.0, 54.0, 0.3*1000, 7.9))
         @list4.insert_head(Alimento.new("Nuez", 20.0, 21.0, 54.0, 0.3*1000, 7.9))
@@ -665,18 +668,48 @@ RSpec.describe P6 do
 
     describe Menu do
       before :each do
+
+        @list1 = List.new(nil,nil)
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Carne de vaca", 42.2, 0.0, 6.2, 100.0*1000, 328.0))
+        @list1.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        plato1 =Plato.new("Chuletoncio de vaca", @list1)
+        
+        @list2 = List.new(nil,nil)
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        @list2.insert_head(Alimento.new("Café", 0.1, 0.0, 0.0, 0.4*1000, 0.3))
+        plato2 = Plato.new("Cafeina a tope", @list2)
+
+        @list3 = List.new(nil,nil)
+        @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
+        @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
+        @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
+        @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
+        @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
+        @list3.insert_head(Alimento.new("Tofu", 8.0, 1.9, 4.8, 2.0*1000, 2.2))
+        plato3 = Plato.new("Tofu hasta en los pies",@list3)
+
         @menu=Menu.new("Carne demencia") do
-          descripcion "Comida festiva"
-          partes :nombre => "CARNE",
+          descripcion "Viva españa"
+          partes :nombre => plato1,
                       :precio => 5.10
-          partes :nombre => "leche",
+          partes :nombre => plato2,
                       :precio => 2.40
-          partes :nombre => "pimientos",
+          partes :nombre => plato3,
                       :precio => 3.50
-          valores_ambientales :gei => 1500.78 , :terreno =>312.0
-          valores_nutricion :prot => 40.0,
-                      :lips => 35.6,
-                      :carbs => 54.9
 
         end
       end
