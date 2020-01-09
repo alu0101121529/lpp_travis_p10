@@ -93,12 +93,13 @@ class Menu
     def to_s
         resultado = ""
         resultado +="Nombre: #{@nombre} \n"
+        resultado +="Descripción: #{@descripcion} \n"
         resultado +="Precio total: #{sum_precio()}€"
         @platos.zip(@precios).each do |plato,precio|
-            resultado << "\n" << plato << " " << precio.to_s() << "€"
+            resultado << "\n" << plato.nombre << " " << precio.to_s() << "€"
+            resultado << "\n\nValores sobre la nutrición\n\nProteinas: " << plato.proteinas.to_s() << "\nLipidos: " << plato.lipidos.to_s() << "\nCarbo Hidratos: " << plato.hidratos_carbono.to_s()
+            resultado << "\n\nValores sobre la contaminación\n\nGases: " << plato.gei.to_s() << "\nTerrenos " << plato.terrenos.to_s() << "\n"
         end
-        resultado << "\n\nValores sobre la nutrición\n\nProteinas: " << @proteinas.to_s() << "\nLipidos: " << @lipidos.to_s() << "\nCarbo Hidratos: " << @carbohidratos.to_s()
-        resultado << "\n\nValores sobre la contaminación\n\nGases: " << @gases.to_s() << "\nTerrenos " << @terrenos.to_s()
         return resultado
     end
 end
